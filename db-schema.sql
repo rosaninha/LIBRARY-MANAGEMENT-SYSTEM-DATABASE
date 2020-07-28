@@ -1,3 +1,9 @@
+USE Master
+GO
+
+USE Library
+GO
+
 CREATE DATABASE Library
 GO
 
