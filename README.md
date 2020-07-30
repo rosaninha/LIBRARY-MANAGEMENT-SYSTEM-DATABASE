@@ -14,6 +14,6 @@
 
 ### ERD
 
-https://github.com/rosaninha/LIBRARY-MANAGEMENT-SYSTEM-DATABASE/blob/master/ERD-v1.png
+https://app.diagrams.net/#Hrosaninha%2FLIBRARY-MANAGEMENT-SYSTEM-DATABASE%2Fmaster%2FLibrary%20Sys%20Database.drawio
 
 
