@@ -2001,3 +2001,14 @@ insert into BookBinding (BindingId, IsbnCode, BookTitle, Author, ReviewYear, Lan
 insert into BookBinding (BindingId, IsbnCode, BookTitle, Author, ReviewYear, Language, NoCopies, CopyId, Cotegory, ShelfNumber, AisleNumber) values (999, '407698237-1', 'Soldier''s Sweetheart, A', 'Brockie Bordiss', 2008, 'English', 6, 2971, 'Drama|War', 4, 4);
 insert into BookBinding (BindingId, IsbnCode, BookTitle, Author, ReviewYear, Language, NoCopies, CopyId, Cotegory, ShelfNumber, AisleNumber) values (1000, '236611124-X', 'Kiss Me, Guido', 'Tatiania Fonzo', 2002, 'English', 10, 2543, 'Comedy', 12, 5);
 
+
+INSERT INTO User.UserType (UserTypeId, Description, DayLimit, BookLimit) VALUES ('1','Teacher', 14, 10)
+INSERT INTO User.UserType (UserTypeId, Description, DayLimit, BookLimit) VALUES ('2','Student', 7, 3)
+
+
+INSERT INTO Book.Borrower (BorrowerId, BookId, CopyId, BorrowerdFrom, BorrowerdTo, ActualReturn, Renewd, WatingList, WaitingId) VALUES ('1','10', ?? , 2020/03/01, 2020/03/08, 2020/03/07, 0, 0, NULL)
+INSERT INTO Book.Borrower (BorrowerId, BookId, CopyId, BorrowerdFrom, BorrowerdTo, ActualReturn, Renewd, WatingList, WaitingId) VALUES ('1','10', ?? , 2020/03/01, 2020/03/08, 2020/03/08, 1, 0, NULL)
+INSERT INTO Book.Borrower (BorrowerId, BookId, CopyId, BorrowerdFrom, BorrowerdTo, ActualReturn, Renewd, WatingList, WaitingId) VALUES ('1','10', ?? , 2020/03/01, 2020/03/08, 2020/03/10, 0, 1, 20)
+
+
+
