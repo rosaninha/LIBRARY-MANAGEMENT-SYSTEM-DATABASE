@@ -1,10 +1,10 @@
 USE Master
 GO
 
-USE Library
+CREATE DATABASE Library
 GO
 
-CREATE DATABASE Library
+USE Library
 GO
 
 CREATE SCHEMA User
