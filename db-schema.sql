@@ -59,7 +59,7 @@ CREATE TABLE Book.Borrower (
   BorrowerdTo Date NOT NULL,
   ActualReturn Date NOT NULL,
   Renewed Bid NOT NULL,
-  WatingList Bid NOT NULL,
+  WaitingList Bid NOT NULL,
   WaitingId Int NULL FOREIGN KEY REFERENCES User.UserDetails(UserId),
 )
 
