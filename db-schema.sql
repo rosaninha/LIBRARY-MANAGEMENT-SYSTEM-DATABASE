@@ -11,8 +11,8 @@ CREATE SCHEMA User
 GO
 
 CREATE TABLE User.UserDetails (
-  UserID INT NOT NULL PRIMARY KEY,
-  UserDescription  Int NOT NULL, 
+  UserId INT NOT NULL PRIMARY KEY,
+  UserType  Int NOT NULL FOREIGN KEY REFERENCES User.UserType(UserTypeId) 
   FirstName nVarchar (50) NOT NULL,
   MiddleName nVarchar (50) NULL,
   LastName nVarchar (50) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE User.UserDetails (
 )
 
 CREATE TABLE User.UserType (
-  UserType  Int NOT NULL PRIMARY KEY,
+  UserTypeId  Int NOT NULL PRIMARY KEY,
   DayLimit Varchar(10) NOT NULL,
   BookLimit Varchar(10) NOT NULL,
   Description Varchar (10) NOT NULL,
@@ -52,16 +52,15 @@ CREATE TABLE Book.BookBiding (
 )
   
 CREATE TABLE Book.Borrower (
-  BorrowerId Int NOT NULL,
-  BookId Int NOT NULL,
-  CopyId Int NOT NULL,
+  BorrowerId Int NOT NULL FOREIGN KEY REFERENCES User.UserDetails(UserId),
+  BookId Int NOT NULL FOREIGN KEY REFERENCES Book.Binding(BindingId),
+  CopyId Int NOT NULL FOREIGN KEY REFERENCES Book.Binding(CopyId),
   BorrowerdFrom Date NOT NULL,
   BorrowerdTo Date NOT NULL,
   ActualReturn Date NOT NULL,
-  IssuedBy Int NOT NULL,
   Renewd Bid NOT NULL,
   WatingList Bid NOT NULL,
-  WaitingId Int NULL,
+  WaitingId Int NULL FOREIGN KEY REFERENCES User.UserDetails(UserId),
 )
 
                          
