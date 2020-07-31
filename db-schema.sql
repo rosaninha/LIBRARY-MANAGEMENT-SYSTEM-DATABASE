@@ -12,7 +12,7 @@ GO
 
 CREATE TABLE User.UserDetails (
   UserId INT NOT NULL PRIMARY KEY,
-  UserType  Int NOT NULL FOREIGN KEY REFERENCES User.UserType(UserTypeId) 
+  UserTypeId  Int NOT NULL FOREIGN KEY REFERENCES User.UserType(UserTypeId) 
   FirstName nVarchar (50) NOT NULL,
   MiddleName nVarchar (50) NULL,
   LastName nVarchar (50) NOT NULL,
