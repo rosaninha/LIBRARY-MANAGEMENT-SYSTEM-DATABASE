@@ -14,6 +14,6 @@
 
 ### ERD
 
-https://app.diagrams.net/#Hrosaninha%2FLIBRARY-MANAGEMENT-SYSTEM-DATABASE%2Fmaster%2FLibrary%20Sys%20Database.drawio
+https://app.diagrams.net/?libs=gcp2#W9b0e79949930287c%2F9B0E79949930287C!1179
 
 
