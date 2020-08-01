@@ -9,7 +9,7 @@ FROM Book.BookBiding
 WHERE Language = 'Portuguese'; 
 
 
-CREATE VIEW EnglishBook AS
+CREATE VIEW CategoryBook AS
 SELECT BookTitle, Author, ShelfNumber, AisleNumber 
 FROM Book.BookBiding
 WHERE CategoryName = 'Romance'; 
