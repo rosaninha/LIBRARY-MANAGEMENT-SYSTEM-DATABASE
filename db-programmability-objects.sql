@@ -34,5 +34,19 @@ CREATE PROCEDURES User.UserDetails_INSERT
   @ContactNumber2 Varchar (10),
   @AddressLine1 Varchar (100),
   @AddressLine2 Varchar (100)
- AS
-  INSERT INTO User.UserDetails (
+  
+  AS
+    INSERT INTO User.UserDetails
+    (
+     [FirstName], [MiddleName], [LastName], [Sex], [DateBirth], [IdentificationType], [IdentificationNumber], [Email], [ContactNumber], [ContactNumber2], [AddressLine1], [AddressLine2]
+    )
+    VALUES
+    (
+     'Maria', 'NULL', 'Silva', 'Female', '2000-01-01', 'Drive License', '0124521', 'maria@testemail.com', '0000000000', NULL, '1 Street Toronto', NULL
+    )
+
+GO
+
+EXEC User.UserDetails_INSERT 
+
+
