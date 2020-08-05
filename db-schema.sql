@@ -11,7 +11,7 @@ CREATE SCHEMA User
 GO
 
 CREATE TABLE User.UserDetails (
-  UserId INT NOT NULL PRIMARY KEY,
+  UserId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
   UserTypeId  Int NOT NULL FOREIGN KEY REFERENCES User.UserType(UserTypeId) 
   FirstName nVarchar (50) NOT NULL,
   MiddleName nVarchar (50) NULL,
@@ -38,7 +38,7 @@ CREATE SCHEMA Book
 GO
 
 CREATE TABLE Book.BookBiding (
-  BidingId Int  NOT NULL PRIMARY KEY,
+  BidingId Int  NOT NULL IDENTITY(1,1) PRIMARY KEY,
   IsbnCode Int  NOT NULL,
   BookTitle nVarchar(100) NOT NULL,
   Author nVarchar (50) NOT NULL,
