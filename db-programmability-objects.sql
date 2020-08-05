@@ -20,8 +20,6 @@ FROM Book.Borrower
 WHERE WaitingList = '1'; 
 
 CREATE PROCEDURES User.UserDetails_INSERT
-  @UserId Int
-  @UserTypeId Int,
   @FirstName nVarchar (50),
   @MiddleName nVarchar (50),
   @LastName nVarchar (50),
@@ -42,11 +40,11 @@ CREATE PROCEDURES User.UserDetails_INSERT
     )
     VALUES
     (
-     'Maria', 'NULL', 'Silva', 'Female', '2000-01-01', 'Drive License', '0124521', 'maria@testemail.com', '0000000000', NULL, '1 Street Toronto', NULL
+     @FirstName, @MiddleName, @LastName, @Sex, @DateBirth, @IdentificationType, @IdentificationNumber, @Email, @ContactNumber, @ContactNumber2, @AddressLine1, @AddressLine2
     )
-
 GO
 
-EXEC User.UserDetails_INSERT 
+EXEC User.UserDetails_INSERT 'Maria', 'NULL', 'Silva', 'Female', '2000-01-01', 'Drive License', '0124521', 'maria@testemail.com', '0000000000', NULL, '1 Street Toronto', NULL
+    
 
 
